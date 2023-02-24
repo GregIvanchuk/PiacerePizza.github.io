@@ -1,0 +1,118 @@
+
+.Item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Item h3{
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+.select_option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 260px;
+    height: 85px;
+    background-color:  #e5e5e5;;
+    border-radius: 7px;
+    gap: 5px;
+}
+.types {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 250px;
+}
+.types li {
+    flex: 1;
+}
+
+.sizes {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 250px;
+}
+.sizes li {
+    flex: 1;
+}
+.select_option ul li {
+    list-style-type:none;
+}
+.activeType {
+    margin-left: -15px;
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+.activeSize{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -15px;
+    margin-right: 25px;
+    background-color: white;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 5px;
+}
+
+.item_footer {
+    display: flex;
+    align-items: center;
+    gap:46px
+}
+.item_footer span{
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.015em;
+    color: #000000;
+}
+.item_footer button{
+    width: 132px;
+    height: 40px;
+    background-color: #FFFFFF;
+    border: 1px solid #EB5A1E;
+    font-size: 17px;
+    font-weight: 600;
+    color: #EB5A1E;
+    border-radius: 30px;
+}
+.item_footer button i {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-size: 13px;
+    background-color: #EB5A1E;
+    color: white;
+    border-radius: 100%;
+    padding-top: 1.5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 1.3px;
+}
+.item_footer button:hover {
+    background-color: #EB5A1E;
+    color: white;
+}
+/* ------------------------------------------------------ */

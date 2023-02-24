@@ -1,0 +1,35 @@
+
+.epmty_info{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.empty_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.epmty_info span {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 145.4%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #777777;
+}
+.epmty_info button {
+    width: 210px;
+    height: 46px;
+    background: #282828;
+    border-radius: 30px;
+    color: white;
+    margin-left: 20px;
+}

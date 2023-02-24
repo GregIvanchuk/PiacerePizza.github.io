@@ -1,0 +1,143 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    max-width: 100%;
+}
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.head{
+    margin-top: 38px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 373px;
+    max-width: 820px;
+}
+@media(max-width:700px){
+    .head{
+        gap:173px ;
+    }
+}
+@media(max-width:580px){
+    .head{
+       gap:10px;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+}
+
+
+.title_cart{
+    display: flex;
+    gap: 5px;
+}
+.delete_cart{
+    display: flex;
+    gap: 3px;
+}
+.delete_cart span {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #B6B6B6;
+}
+.cart_footer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+}
+.total_info{
+    display: flex;
+    gap:270px;
+}
+@media(max-width:700px){
+    .total_info{
+        justify-content: center;
+        gap:70px ;
+        margin-left: 30px;
+    }
+}
+@media(max-width:580px){
+    .total_info{
+        flex-direction: column;
+        justify-content: center;
+        gap:10px ;
+        margin-left: 30px;
+        align-items: center;
+    }
+}
+
+.cart_buts{
+    display: flex;
+    gap:250px;
+}
+@media(max-width:700px){
+    .cart_buts{
+        justify-content: center;
+        gap:70px ;
+        margin-left: 30px;
+    }
+}
+@media(max-width:580px){
+    .cart_buts{
+        align-items: center;
+        gap:20px ;
+        flex-direction: column;
+    }
+}
+.total_count,.total_price{
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+.total_count span {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+.total_price span{
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    color: #EB5A1E;;
+}
+.buy {
+    width: 211px;
+    height: 55px;
+    background: #FE5F1E;
+    border-radius: 30px;
+    color: white;
+    border: none;
+}
+.c_back{  
+    width: 211px;
+    height: 55px;
+    background: #FFFFFF;
+    border: 1px solid #D3D3D3;
+    border-radius: 30px;
+    color: #D3D3D3;
+}

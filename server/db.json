@@ -1,0 +1,13 @@
+{
+    "goods" : [
+        {"img":"/images/im1.jpg", "title": "Папероні",       "price":"23" , "id" : 1, "sizes":[26,30,40], "type" : [0,1]},
+        {"img":"/images/im2.jpg", "title": "Сирна",          "price":"21" , "id" : 2, "sizes":[26,30],    "type" : [0]},
+        {"img":"/images/im3.jpg", "title": "Азіатська",      "price":"32" , "id" : 3, "sizes":[26,30,40], "type" : [1]},
+        {"img":"/images/im4.jpg", "title": "Ананас з куркою","price":"17" , "id" : 4, "sizes":[26,30,40], "type" : [0,1]},
+        {"img":"/images/im1.jpg", "title": "Маргарита",      "price":"40" , "id" : 5, "sizes":[30,40],    "type" : [0,1]},
+        {"img":"/images/im2.jpg", "title": "Українська",     "price":"20" , "id" : 6, "sizes":[26,30,40], "type" : [0]},
+        {"img":"/images/im3.jpg", "title": "Неополітанська", "price":"19" , "id" : 7, "sizes":[26,40],    "type" : [0,1]},
+        {"img":"/images/im4.jpg", "title": "Чізбургер-піца", "price":"14" , "id" : 7, "sizes":[26],       "type" : [0,1]}
+
+]
+}
