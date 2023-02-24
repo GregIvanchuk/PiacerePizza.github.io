@@ -1,0 +1,80 @@
+.sort{
+    width: 220px;
+    margin-right: 58px;
+   }
+   @media(max-width:1150px){
+    .sort{
+        justify-content: center;
+        margin-right: 0;
+
+    }
+}
+   .sort svg {
+    margin-right: 5px;
+   }
+   .sortBy{
+       font-family: 'Proxima Nova';
+       font-style: normal;
+       font-weight: 700;
+       font-size: 14px;
+       line-height: 17px;
+       letter-spacing: 0.015em;
+       color: #2C2C2C;
+   }
+   .sortByItem{
+    color:orangered ;
+    border-bottom: 1px dashed orangered ;
+   }
+   .sort_popup{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 132px;
+    height: 136px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    margin-left: 82px;
+   }
+   .sort_popup ul {
+    margin-right: 35px;
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+   }
+   .selected{
+    color: black;
+    list-style-type: none;
+   }
+   .selected:hover{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color:#FFFFFF;
+    height: 30px;
+    width: 110px;
+    background-color: #2C2C2C;;
+    box-sizing: border-box;
+    padding-top: 5px;
+    margin-right: 5px;
+    padding-left: 15px;
+   }
+   .activeSelected{
+    color: orangered;
+    list-style-type: none;
+   }
+   .activeSelected:hover{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: white;
+    height: 30px;
+    width: 110px;
+    background-color: #2C2C2C;
+    box-sizing: border-box;
+    padding-top: 5px;
+    margin-right: 5px;
+    padding-left: 15px;
+   }

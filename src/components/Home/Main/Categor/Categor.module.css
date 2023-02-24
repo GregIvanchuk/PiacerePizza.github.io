@@ -1,0 +1,82 @@
+
+.catItems {
+       display: flex;
+       gap: 8.95px
+   }
+   @media(max-width:1150px){
+    .catItems{
+        justify-content: center;
+        gap: 5px;
+    }
+}
+@media(max-width:1150px){
+.catItems{
+    margin-left: -40px;
+    overflow: hidden;
+}
+}
+@media(max-width:1050px){
+    .catNav{
+       width: 500px;
+       flex-wrap: wrap;
+       overflow: scroll;
+       
+    }
+}
+@media(max-width:501px){
+    .catNav{
+       width: 300px;
+       flex-wrap: wrap;
+       overflow: scroll;
+       
+    }
+}
+@media(max-width:1050px){
+     .catItems{
+        width: 1000px;
+        flex-wrap: wrap;
+        overflow: scroll;
+        margin-bottom: 10px;
+    }
+}
+@media(max-width:1050px){
+    .catItem {
+        display: inline-block;
+    }
+}
+   .catItem {
+       background-color: #e5e5e5;
+       List-style-type:none;
+       padding-top: 14px;
+       padding-bottom: 14px;
+       padding-left: 35px;
+       padding-right: 35px;
+       border-radius: 30px;
+   }
+   .active {
+       background-color: #282828;
+       color:white;
+       List-style-type:none;
+       padding-top: 14px;
+       padding-bottom: 14px;
+       padding-left: 35px;
+       padding-right: 35px;
+       border-radius: 30px;
+}
+   
+   .catItems li :hover{
+       background-color: white;
+       color: black;
+       cursor: pointer;
+   }
+    h1{
+    margin-left: 38px;
+    margin-top: 38px;
+    margin-bottom: 38px;
+}
+
+@media(max-width:400px){
+     h1{
+        margin-left: -5px;
+    }
+}
