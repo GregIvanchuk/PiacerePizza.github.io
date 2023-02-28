@@ -1,11 +1,16 @@
 import styles from "./Good.module.css";
 import { useState } from "react";
-function Good({img,title,price,sizes,type,isLoading}) {
+import {addCartItems} from "../../../../Redux/cartSlice";
+import { useSelector,useDispatch } from "react-redux";
+function Good({id,img,title,price,sizes,type,isLoading}) {
     const [pizzaCount,setPizzaCount] = useState(0);
     const nameTypes = ["тонкі","традиційні"];
     const [activeType , setActiveType] = useState(0);
     const [activeSize , setActiveSize] = useState(0);
-    const addCount = () =>{
+    const dispatch = useDispatch(); 
+    const addCartItem = (obj) =>{
+        console.log(obj);
+        dispatch(addCartItems(obj));
         setPizzaCount(pizzaCount + 1);
     }
     return (
@@ -22,7 +27,7 @@ function Good({img,title,price,sizes,type,isLoading}) {
                 </div>
                 <div className={styles.item_footer}>
                     <span>від {price} $</span>
-                    <button onClick={addCount}>+ Добавити <i>{pizzaCount}</i></button>
+                    <button onClick={()=>addCartItem({id,img,title,price})}>+ Добавити <i>{pizzaCount}</i></button>
                 </div>
             </div>
     );

@@ -1,23 +1,28 @@
 import styles from './Item.module.css';
-function Item() {
+import {removeItem,increment,decrement} from "../../../../Redux/cartSlice";
+import { useSelector,useDispatch } from "react-redux";
+function Item({id,img,price,title}) {
+  const dispatch = useDispatch();
+  const cartItems = useSelector(state => state.cart.cartItems)
+  const count = useSelector(state => state.cart.count)
   return (
             <div className={styles.cart_item}>
               <div className={styles.descr}>
-              <img width={80} height={80} src="images/im1.jpg" alt="" />
+              <img width={80} height={80} src={img} alt="" />
               <div className={styles.title_inner_cart}>
-                <h3>Назва піци</h3>
+                <h3>{title}</h3>
                 <span>тонке тісто, 6см</span>
               </div>
               </div>
               <div className={styles.cart_item_rigth}>
               <div className={styles.count}>
-                <img width={29} height={29} src="images/minusGood.png" alt="" />
-                <span>3</span>
-                <img width={32} height={32} src="images/addGood.png" alt="" />
+                <img onClick={()=> dispatch(decrement())}  width={29} height={29} src="images/minusGood.png" alt="" />
+                <span>{count}</span>
+                <img onClick={()=> dispatch(increment())}  width={32} height={32} src="images/addGood.png" alt="" />
               </div>
-              <div className={styles.price}>340 $</div>
+              <div className={styles.price}>{price} $</div>
               </div>
-              <img className={styles.del_cart} width={30} height={30} src="images/delGood.png" alt="" />
+              <img onClick={() => dispatch(removeItem(id))} className={styles.del_cart} width={30} height={30} src="images/delGood.png" alt="" />
             </div>
 
   );

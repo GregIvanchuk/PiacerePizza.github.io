@@ -1,7 +1,10 @@
 import styles from './Cart.module.css';
 import EmptyCart from './EmptyCart';
 import FullCart from './FullCart';
+import Counter  from '../Counter';
+import { useSelector,useDispatch } from "react-redux";
 function Cart() {
+  const cartItems = useSelector(state => state.cart.cartItems)
   return (
         <>
         <div className={styles.container}>
@@ -16,8 +19,11 @@ function Cart() {
         <div className={styles.header_rigth}>
         </div>
       </header>
-      {/* <FullCart/>  */}
-      <EmptyCart/>
+      {(cartItems.length != 0) ?
+      <FullCart/> :
+       <EmptyCart/>
+    }
+      {/* <Counter/> */}
       </div> 
 
 </>

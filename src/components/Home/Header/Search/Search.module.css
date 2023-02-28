@@ -1,0 +1,31 @@
+.search{
+    position: relative;
+    width: 25%;
+    margin-right: 20px;
+}
+
+/* @media(max-width:1000px){
+    .search{
+  margin-top: 100px;
+} */
+
+.search svg {
+    fill: orangered;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left:10px;
+    top: 10px;
+}
+.search input {
+    border: 1px solid orangered;
+    max-width: 100%;
+    padding: 8px 35px;
+    font-size: 20px;
+    border-radius: 30px;
+    color: rgb(131, 131, 131);
+}
+.search input:focus {
+    outline: none;
+  }
+  

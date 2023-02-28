@@ -37,9 +37,13 @@
 }
 
 
-.title_cart{
+.title_cart {
     display: flex;
-    gap: 5px;
+    gap:5px;
+    align-items:center;
+}
+.title_cart h1 {
+    margin-left:0px
 }
 .delete_cart{
     display: flex;
