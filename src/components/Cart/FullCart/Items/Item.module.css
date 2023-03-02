@@ -65,16 +65,27 @@
     letter-spacing: 0.01em;
     color: #8D8D8D;
 }
+@media(max-width:600px){
+    .descr span {
+        font-size: 13px;
+        width: 70px;
+    }
+}
 .count{
     display: flex;
     align-items:center;
-    gap : 3px;
     justify-content:center;
+    gap: 2px;
+}
+@media(max-width:500px){
+    .count {
+        gap: 1px;
+    }
 }
 @media(max-width:500px){
     .count img{
-        height: 15px;
-        width: 15px;
+        height: 10px;
+        width: 10px;
     }
 }
 .count span {
@@ -90,7 +101,9 @@
 }
 @media(max-width:500px){
     .count span{
+        text-align: center;
         font-size: 15px;
+        width:15px;
     }
 }
 .price{
@@ -107,11 +120,11 @@
     .price{
         font-size: 15px;
         line-height: 20px;
-        width: 50px;
+        width: 40px;
     }
 }
 @media(max-width:400px){
     .cart_item{
-       gap:0px;
+       gap:5px;
     }
 }
