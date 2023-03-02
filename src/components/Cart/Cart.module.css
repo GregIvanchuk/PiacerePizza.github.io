@@ -16,12 +16,18 @@
     border-radius: 0px;
     }
 }
+
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 137px;
     border-bottom: 1px solid #FE5F1E;
+}
+@media(max-width:500px){
+    .header{
+        display: none;
+    }
 }
 .header_left{
     display: flex;
