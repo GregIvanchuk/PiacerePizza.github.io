@@ -21,10 +21,8 @@ function Main ({}) {
      return (resp.json())
     })
     .then((arr) => {
-      setTimeout(()=>{
       dispatch(setGoods(arr));
       setIsLoading(false);
-    },1000)
     })      
     //   async function fetchData() {
     // const Responceobj = await axios.get("http://localhost:3001/goods");

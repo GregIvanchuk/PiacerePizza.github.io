@@ -41,6 +41,11 @@
     align-items: center;
     gap: 15px;
 }
+@media(max-width:500px){
+    .descr{
+        width: 200px;
+    }
+}
 .descr h3{
     width:150px;
     font-family: 'Proxima Nova';
@@ -93,14 +98,20 @@
     font-family: 'Proxima Nova';
     font-style: normal;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 19px;
     line-height: 27px;
     letter-spacing: 0.01em;
     color: #000000;
 }
 @media(max-width:500px){
     .price{
-        font-size: 17px;
+        font-size: 15px;
         line-height: 20px;
+        width: 50px;
+    }
+}
+@media(max-width:400px){
+    .cart_item{
+       gap:0px;
     }
 }
