@@ -144,6 +144,9 @@
     color: white;
     border: none;
 }
+.buy:hover{
+    background: #5c240d;
+}
 .c_back{  
     width: 211px;
     height: 55px;
@@ -151,4 +154,7 @@
     border: 1px solid #D3D3D3;
     border-radius: 30px;
     color: #D3D3D3;
+}
+.c_back:hover{
+    background: #e24908;
 }
