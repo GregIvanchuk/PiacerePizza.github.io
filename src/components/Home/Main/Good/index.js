@@ -27,7 +27,7 @@ function Good({id,img,title,price,sizes,type,typeid,isLoading,}) {
                 </div>
                 <div className={styles.item_footer}>
                     <span>{price[activeType][activeSize]} $</span>
-                    <button onClick={()=>addCartItem({id,img,title,typeid: typeid[activeType], price : price[activeType][activeSize] ,type : type[activeType], sizes : sizes[activeSize] })}>+ Добавити <i>{addedCount}</i></button>
+                    <button onClick={()=>addCartItem({id,img,title,typeid: typeid[activeType], price : price[activeType][activeSize] ,type : type[activeType], sizes : sizes[activeSize] })}>+ Добавити </button>
                 </div>
             </div>
     );
