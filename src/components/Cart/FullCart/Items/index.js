@@ -19,9 +19,9 @@ function Item({id,img,price,title,typeid,sizes,type}) {
               </div>
               <div className={styles.cart_item_rigth}>
               <div className={styles.count}>
-                <img onClick={() => dispatch(decrement({id,price,typeid}))}  width={24} height={24} src="images/minusGood.png" alt="" />
+                <img onClick={() => dispatch(decrement({id,price,typeid}))} className={styles.img_min}  width={24} height={24} src="images/minusGood.png" alt="" />
                 <span>{addedCount}</span>
-                <img onClick={() => dispatch(increment({id,price,typeid}))}  width={27} height={27} src="images/addGood.png" alt="" />
+                <img onClick={() => dispatch(increment({id,price,typeid}))} className={styles.img_plus} width={27} height={27} src="images/addGood.png" alt="" />
               </div>
               <div className={styles.price}>{(price * addedCount).toFixed(2)}</div>
               </div>
