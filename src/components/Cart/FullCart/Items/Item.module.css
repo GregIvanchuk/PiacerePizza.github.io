@@ -84,8 +84,8 @@
 }
 @media(max-width:500px){
     .count img{
-        height: 10px;
-        width: 10px;
+        height: 15px;
+        width: 15px;
     }
 }
 .count span {
@@ -125,6 +125,6 @@
 }
 @media(max-width:400px){
     .cart_item{
-       gap:5px;
+       gap:10px;
     }
 }
