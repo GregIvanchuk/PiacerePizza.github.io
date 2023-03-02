@@ -35,9 +35,12 @@
 }
 .epmty_info button {
     width: 210px;
-    height: 46px;
-    background: #282828;
+    height: 66px;
+    background: orangered;
     border-radius: 30px;
     color: white;
     margin-left: 20px;
+}
+.epmty_info button:hover {
+    background: rgb(123, 60, 37);
 }
