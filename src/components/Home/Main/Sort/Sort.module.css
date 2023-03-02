@@ -7,6 +7,12 @@
         margin-right: 0 auto;
     }
 }
+@media(max-width:600px){
+    .sort{
+        margin-right: 0px;
+        width: 150px;
+    }
+}
    .sort svg {
     margin-right: 5px;
    }

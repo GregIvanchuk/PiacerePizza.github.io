@@ -1,4 +1,4 @@
-.search{
+.search {
     position: relative;
     width: 18%;
 }
@@ -9,14 +9,7 @@
         width: 300px;
         margin: 0 auto;
 }  
- }
- @media(max-width:750px){
-    .search{
-        order: 2;
-        width: 200px;
-        margin: 0 auto;
-}  
- }
+}
 
 .search svg {
     fill: orangered;
