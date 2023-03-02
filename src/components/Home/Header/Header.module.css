@@ -56,8 +56,11 @@
     margin-right: 38px;
     width: 150px;
     height: 50px;
-    background: #fe5f1e;
+    background: #ff6e13;
     border-radius: 30px;
+}
+.cart_button:hover {
+    background: #8c3c0a;
 }
 @media (max-width: 500px) {
     .cart_button {
