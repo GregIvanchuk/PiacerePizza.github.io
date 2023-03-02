@@ -16,7 +16,7 @@ function Main ({}) {
     const [isLoading, setIsLoading] = React.useState(true);
     const inputValued =  useSelector((state) => state.search.inputValue)
      useEffect(() => {
-    fetch("https://83fa-188-191-238-40.eu.ngrok.io/goods")
+    fetch("https://be42-188-191-238-40.eu.ngrok.io/goods")
     .then((resp) => {
      return (resp.json())
     })
