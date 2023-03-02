@@ -59,7 +59,6 @@ console.log(selected)
 console.log(catId)
     const filtredGoods = goods.filter((item) =>
     item.title.toLowerCase().includes(inputValued.toLowerCase())
-         || item.price.toLowerCase().includes(inputValued.toLowerCase()),
          ) 
 return(
     <main className={styles.main}>

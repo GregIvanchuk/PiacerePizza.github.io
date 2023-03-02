@@ -1,28 +1,19 @@
 .search {
-    position: relative;
+    display: flex;
+    justify-content: center;
     width: 18%;
 }
 
  @media(max-width:750px){
     .search{
         order: 2;
-        width: 300px;
-        margin: 0 auto;
+        width: 100%;
 }  
-}
-
-.search svg {
-    fill: orangered;
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    left:10px;
-    top: 10px;
 }
 .search input {
     border: 1px solid orangered;
     max-width: 100%;
-    padding: 8px 35px;
+    padding: 8px 15px;
     font-size: 20px;
     border-radius: 30px;
     color: rgb(131, 131, 131);

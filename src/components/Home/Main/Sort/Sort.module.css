@@ -4,13 +4,7 @@
    }
    @media(max-width:1150px){
     .sort{
-        margin-right: 0 auto;
-    }
-}
-@media(max-width:600px){
-    .sort{
-        margin-right: 0px;
-        width: 150px;
+        margin: 0 auto;
     }
 }
    .sort svg {
