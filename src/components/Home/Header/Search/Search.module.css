@@ -1,13 +1,22 @@
 .search{
     position: relative;
-    width: 25%;
-    margin-right: 20px;
+    width: 18%;
 }
 
-/* @media(max-width:1000px){
+ @media(max-width:750px){
     .search{
-  margin-top: 100px;
-} */
+        order: 2;
+        width: 300px;
+        margin: 0 auto;
+}  
+ }
+ @media(max-width:750px){
+    .search{
+        order: 2;
+        width: 200px;
+        margin: 0 auto;
+}  
+ }
 
 .search svg {
     fill: orangered;

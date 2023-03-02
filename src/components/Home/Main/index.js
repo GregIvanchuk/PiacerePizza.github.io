@@ -11,7 +11,7 @@ import MyLoader from "./Good/PizzaBlock";
 import Categor from "./Categor";
 import Sort from "./Sort";
 import MyContext from "../../../MyContext";
-function Main () {
+function Main ({}) {
     const dispatch = useDispatch();
     const [isLoading, setIsLoading] = React.useState(true);
     const inputValued =  useSelector((state) => state.search.inputValue)
@@ -72,7 +72,7 @@ return(
     <div className={styles.Items1}>
       {isLoading ? [...Array(8)].map((_ , index) => <MyLoader key={index}/>):
       (catId == 0) ? 
-      filtredGoods.map((item,index) => <Good isLoading={isLoading} key={index} {...item}/>):
+      filtredGoods.map((item,index) => <Good  isLoading={isLoading} key={index} {...item}/>):
       filtredGoods.filter((obj => (obj.category === catId)))
     .map((item,index)=> <Good isLoading={isLoading} key={index} {...item}/>)} 
     </div>

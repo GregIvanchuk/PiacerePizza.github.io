@@ -5,3 +5,11 @@
     background-color: white;
     border-radius: 30px;
 }
+@media (max-width:600px) {
+    .container{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-radius: 0px;
+    }
+    
+}

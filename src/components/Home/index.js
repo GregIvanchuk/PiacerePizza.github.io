@@ -5,8 +5,8 @@ import React from "react";
 function Home () {
 return(
     <div className={styles.container}>
-        <Header />
-        <Main/>
+        <Header/>
+        <Main />
       <footer className={styles.footer}></footer>
       </div>
        )}

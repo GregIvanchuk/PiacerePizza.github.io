@@ -1,17 +1,17 @@
 import styles from "./Good.module.css";
-import { useState } from "react";
-import {addCartItems} from "../../../../Redux/cartSlice";
+import {addCartItems,increment} from "../../../../Redux/cartSlice";
 import { useSelector,useDispatch } from "react-redux";
-function Good({id,img,title,price,sizes,type,isLoading}) {
-    const [pizzaCount,setPizzaCount] = useState(0);
-    const nameTypes = ["тонкі","традиційні"];
+import {useState} from "react";
+function Good({id,img,title,price,sizes,type,typeid,isLoading,}) {
+    const cartItems  = useSelector(state => state.cart.cartItems)
+    const cartItem   = useSelector (state => state.cart.cartItems.find((obj) => obj.id === id   ))
+    const addedCount = cartItem ?  cartItem.count : 0; 
     const [activeType , setActiveType] = useState(0);
     const [activeSize , setActiveSize] = useState(0);
-    const dispatch = useDispatch(); 
+    const dispatch  = useDispatch(); 
     const addCartItem = (obj) =>{
         console.log(obj);
         dispatch(addCartItems(obj));
-        setPizzaCount(pizzaCount + 1);
     }
     return (
             <div className={styles.Item}>
@@ -19,15 +19,15 @@ function Good({id,img,title,price,sizes,type,isLoading}) {
                 <h3>{title}</h3>
                 <div className={styles.select_option}>
                     <ul className={styles.types}>
-                    {type.map((value,i) => <li key={i}  onClick={()=>{setActiveType(i)}} className={activeType == i ? styles.activeType : "" }>{nameTypes[value]}</li> )}
+                    {type.map((value,i) => <li key={i}  onClick={()=>{setActiveType(i)}} className={activeType == i ? styles.activeType : "" }>{value}</li> )}
                     </ul>
                     <ul className={styles.sizes}>
                       {sizes.map((value,i) =>  <li key={i} onClick={()=>{setActiveSize(i)}} className={activeSize == i ? styles.activeSize : "" } >{value}см</li> )}
                     </ul>
                 </div>
                 <div className={styles.item_footer}>
-                    <span>від {price} $</span>
-                    <button onClick={()=>addCartItem({id,img,title,price})}>+ Добавити <i>{pizzaCount}</i></button>
+                    <span>{price[activeType][activeSize]} $</span>
+                    <button onClick={()=>addCartItem({id,img,title,typeid: typeid[activeType], price : price[activeType][activeSize] ,type : type[activeType], sizes : sizes[activeSize] })}>+ Добавити <i>{addedCount}</i></button>
                 </div>
             </div>
     );

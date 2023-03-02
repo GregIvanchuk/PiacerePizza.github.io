@@ -6,7 +6,7 @@ import Search from "./Search";
 import  { useContext } from 'react';
 function Header () { 
   const cartTotalPrice = useSelector(state => state.cart.cartTotalPrice)
-  const cartItems = useSelector(state => state.cart.cartItems)
+  const totalCount= useSelector(state => state.cart.totalCount)
 return(
     <header className={styles.header}>
          <div className={styles.header_left}>
@@ -19,11 +19,11 @@ return(
         <Search/>
         <div className={styles.header_rigth}>
           <Link to="/cart"><div className={styles.cart_button} >
-            <span>{cartTotalPrice} $</span>
+            <span>{cartTotalPrice.toFixed(2)} $</span>
             <div className={styles.line_between}></div>
             <div  className={styles.inner_cart_button} > 
                     <img height={16} width={16} src="images/cart.png" alt="cart" />
-                    <span>{cartItems.length}</span>
+                    <span>{totalCount}</span>
             </div>
           </div>
           </Link>

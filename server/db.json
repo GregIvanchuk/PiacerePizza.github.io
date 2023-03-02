@@ -1,13 +1,13 @@
 {
     "goods" : [
-        {"img":"/images/im1.jpg", "title": "Папероні",       "price":"23" , "id" : 1, "sizes":[26,30,40], "type" : [0,1],"category" : 1,"rating":8,"count":0,},                                                            
-        {"img":"/images/im2.jpg", "title": "Сирна",          "price":"21" , "id" : 2, "sizes":[26,30],    "type" : [0],  "category" : 1,"rating":3,"count":0,},
-        {"img":"/images/im3.jpg", "title": "Азіатська",      "price":"32" , "id" : 3, "sizes":[26,30,40], "type" : [1],  "category" : 3,"rating":6,"count":0,},
-        {"img":"/images/im4.jpg", "title": "Ананас з куркою","price":"17" , "id" : 4, "sizes":[26,30,40], "type" : [0,1],"category" : 1,"rating":2,"count":0,},
-        {"img":"/images/im1.jpg", "title": "Маргарита",      "price":"40" , "id" : 5, "sizes":[30,40],    "type" : [0,1],"category" : 2,"rating":6,"count":0,},
-        {"img":"/images/im2.jpg", "title": "Українська",     "price":"20" , "id" : 6, "sizes":[26,30,40], "type" : [0],  "category" : 2,"rating":5,"count":0,},
-        {"img":"/images/im3.jpg", "title": "Неополітанська", "price":"19" , "id" : 7, "sizes":[26,40],    "type" : [0,1],"category" : 4,"rating":4,"count":0,},
-        {"img":"/images/im4.jpg", "title": "Чізбургер-піца", "price":"14" , "id" : 8, "sizes":[26],       "type" : [0,1],"category" : 5,"rating":1,"count":0,}
+        {"img":"/images/im1.jpg", "title": "Папероні",       "price":[[19.99,25.50,35.99],[20.99,26.99,36.99]] ,  "id" : 1, "sizes":[26,30,40], "typeid" : [0,1], "type" : ["тонкі","традиційні"],"category" : 1,"rating":8,"count":0},                                                            
+        {"img":"/images/im2.jpg", "title": "Сирна",          "price":[[23.99,27.99],[]] ,                         "id" : 2, "sizes":[26,30],    "typeid" : [0],   "type" : ["тонкі"],             "category" : 1,"rating":3,"count":0},
+        {"img":"/images/im3.jpg", "title": "Азіатська",      "price":[[22.99,24.99,39.99]],                       "id" : 3, "sizes":[26,30,40], "typeid" : [1],   "type" : ["традиційні"],        "category" : 3,"rating":6,"count":0},
+        {"img":"/images/im4.jpg", "title": "Ананас з куркою","price":[[21.99,29.50,41.70],[13.50,18.9,38.99]],   "id" : 4, "sizes":[26,30,40], "typeid" : [0,1], "type" : ["тонкі","традиційні"],"category" : 1,"rating":2,"count":0},
+        {"img":"/images/im1.jpg", "title": "Маргарита",      "price":[[   15.99,17],[   34.33,44.67]],            "id" : 5, "sizes":[30,40],    "typeid" : [0,1], "type" : ["тонкі","традиційні"],"category" : 2,"rating":6,"count":0},
+        {"img":"/images/im2.jpg", "title": "Українська",     "price":[[10.99,12.99,12.5],[20.45,26.5,36.3]],     "id" : 6, "sizes":[26,30,40], "typeid" : [0,1], "type" : ["тонкі","традиційні"],"category" : 2,"rating":5,"count":0},
+        {"img":"/images/im3.jpg", "title": "Неополітанська", "price":[[34.89,47.50]],                            "id" : 7, "sizes":[26,40],       "typeid" : [1],   "type" : ["традиційні"],        "category" : 4,"rating":4,"count":0},
+        {"img":"/images/im4.jpg", "title": "Чізбургер-піца", "price":[[37.99],[38.99]],                           "id" : 8, "sizes":[40],       "typeid" : [0,1], "type" : ["тонкі","традиційні"],"category" : 5,"rating":1,"count":0}
 
 ]
 }

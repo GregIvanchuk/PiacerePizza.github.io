@@ -1,4 +1,5 @@
 .header{
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,6 +35,11 @@
     text-transform: uppercase;
     color: #181818;
 }
+@media(max-width:400px){
+    .title h3 {
+        font-size: 18px;
+    }
+}
 .title span {
     font-family: 'Proxima Nova';
     font-style: normal;
@@ -61,6 +67,11 @@
         margin-left: 38px;
         gap: 3px;
        
+    }
+}
+@media(max-width:500px){
+    .cart_button span{
+        font-size: 10px;
     }
 }
 .cart_button span {

@@ -5,6 +5,7 @@ import {clearItems} from "../../../Redux/cartSlice";
 import {Link} from "react-router-dom";
 function FullCart() {
   const cartItems = useSelector(state => state.cart.cartItems)
+  const totalCount= useSelector(state => state.cart.totalCount)
   const cartTotalPrice = useSelector(state => state.cart.cartTotalPrice)
   const dispatch = useDispatch();
   return (
@@ -24,11 +25,11 @@ function FullCart() {
         <div className={styles.cart_content}>
             <div className={styles.cart_items}>
 
-            {cartItems.map((item,index)=><Item key={item.id} id={item.id}  img={item.img} title={item.title} price={item.price} count={item.count} />)}
+            {cartItems.map((item,index)=> <Item key={item.price} id={item.id}  img={item.img} title={item.title} price={item.price} count={item.count} type={item.type} sizes={item.sizes} />)}
             </div>
             <div className={styles.cart_footer}>
               <div className={styles.total_info}>
-                 <div className={styles.total_count}>Всього піц: <span>{cartItems.length} шт.</span></div>
+                 <div className={styles.total_count}>Всього піц: <span>{totalCount} шт.</span></div>
                  <div className={styles.total_price} >Сума замовлення: <span>{cartTotalPrice} $</span></div>
               </div>
               <div className={styles.cart_buts}>
