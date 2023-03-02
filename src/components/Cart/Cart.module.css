@@ -7,8 +7,14 @@
     background-color: white;
     border-radius: 30px;
 }
-@media(max-width:500){
-    
+@media(max-width:700px){
+    .container{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    border-radius: 0px;
+    }
 }
 .header{
     display: flex;
