@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./Sort.module.css"
 import { useSelector,useDispatch } from "react-redux";
-import {setIsVisiblePopup} from "../../../../Redux/sortSlice";
+import {setIsVisiblePopup} from "../../../../Redux/goodsSlice";
 function Sort ({selected,OnclickSortIndex,sortList}) { 
      const dispatch = useDispatch();
-     const isVisiblePopup= useSelector(state => state.sort.isVisiblePopup)
+     const isVisiblePopup= useSelector(state => state.goods.isVisiblePopup)
     let onCatSort = () =>{
       dispatch(setIsVisiblePopup(!isVisiblePopup));
     }

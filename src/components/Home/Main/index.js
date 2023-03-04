@@ -4,7 +4,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useSelector,useDispatch } from "react-redux";
 import { getCatId } from "../../../Redux/filterSlice";
-import {setSelected  } from "../../../Redux/sortSlice";
+import {setSelected} from "../../../Redux/goodsSlice";
 import {setGoods} from "../../../Redux/goodsSlice";
 import axios from 'axios';
 import MyLoader from "./Good/PizzaBlock";
@@ -16,26 +16,30 @@ function Main ({}) {
     const [isLoading, setIsLoading] = React.useState(true);
     const inputValued =  useSelector((state) => state.search.inputValue)
      useEffect(() => {
-    fetch("https://be42-188-191-238-40.eu.ngrok.io/goods")
+    fetch("https://63d8e9bd74f386d4efe06c87.mockapi.io/items")
     .then((resp) => {
      return (resp.json())
     })
     .then((arr) => {
       dispatch(setGoods(arr));
       setIsLoading(false);
-    })      
+    })     
+    
     //   async function fetchData() {
-    // const Responceobj = await axios.get("http://localhost:3001/goods");
-    // setGoods(Responceobj.data);
+    // const Responceobj = await axios.get("https://63d8e9bd74f386d4efe06c87.mockapi.io/item");
+    // dispatch(setGoods(Responceobj.data));
+    // setIsLoading(false);
     // console.log(goods);
     //   }
     //   fetchData();
    },[])
+  
+
     const categories = ["Всі","Вегатиріанські","М'ясні","Гострі","Гриль","Закриті"]
     const sortList = ["популярності","ціні","алфавіту"];
     const goods = useSelector((state) => state.goods.goods)
     const catId = useSelector((state) => state.filter.catId)
-    const selected = useSelector((state) => state.sort.selected)
+    const selected = useSelector((state) => state.goods.selected)
 //     const dbt = [
 //       {"img":"/images/im1.jpg", "title": "Папероні",       "price":"23" , "id" : 1, "sizes":[26,30,40], "type" : [0,1],"category" : 1,"rating":8},                                                            
 //       {"img":"/images/im2.jpg", "title": "Сирна",          "price":"21" , "id" : 2, "sizes":[26,30],    "type" : [0],  "category" : 1,"rating":3},
@@ -47,14 +51,14 @@ function Main ({}) {
 //       {"img":"/images/im4.jpg", "title": "Чізбургер-піца", "price":"14" , "id" : 8, "sizes":[26],       "type" : [0,1],"category" : 5,"rating":1}
 
 // ]
-    let  sortArr = (arr) => {
-      return (
-    (selected == 2) ? arr.sort((a, b) => a.title.localeCompare(b.title)):
-    (selected == 1)? arr.sort((a, b) => a.price - b.price): arr.sort((a, b) => b.rating - a.rating)
-    )
-  }
-console.log(selected)
-console.log(catId)
+  //   let  sortArr = (arr) => {
+  //     return (
+  //   (selected == 2) ? arr.sort((a, b) => a.title.localeCompare(b.title)):
+  //   (selected == 1)? arr.sort((a, b) => a.price - b.price): arr.sort((a, b) => b.rating - a.rating)
+  //   )
+  // }
+// console.log(selected)
+// console.log(catId)
     const filtredGoods = goods.filter((item) =>
     item.title.toLowerCase().includes(inputValued.toLowerCase())
          ) 
