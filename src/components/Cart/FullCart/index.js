@@ -57,7 +57,7 @@ function FullCart() {
                                 </div>
                                 <div className={styles.total_price}>
                                     Сума замовлення:{" "}
-                                    <span>{cartTotalPrice} $</span>
+                                    <span>{cartTotalPrice.toFixed(2)} $</span>
                                 </div>
                             </div>
                             <div className={styles.cart_buts}>
