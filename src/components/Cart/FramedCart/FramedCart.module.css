@@ -1,0 +1,125 @@
+.drawer{
+    display: flex;
+    flex-direction: column;
+    width: 1176px;
+    height: 100%;
+    right: 0;
+    background-color: white;
+    border-left: 1px solid #eaeaea;
+    z-index: 1;
+    justify-content: space-between ;
+    border-bottom: 1px solid #eaeaea;
+    z-index: 2;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 150px;
+    border-radius: 30px;
+}
+@media(max-width:700px){
+    .drawer{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    border-radius: 0px;
+    }
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 137px;
+    border-bottom: 1px solid #FE5F1E;
+}
+@media(max-width:320px){
+    .header{
+        justify-content: center;
+    }
+}
+.header_left{
+    display: flex;
+    gap: 7px;
+    margin-left: 38px;
+}
+@media(max-width:320px){
+    .header_left{
+        justify-content: center;
+        margin-left: 0px;
+    }
+}
+.header_left img {
+    width: 45px;
+    height: 45px;
+}
+.title h3{
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #181818;
+}
+.title span {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #7B7B7B;
+}
+
+.epmty_info{
+    gap: 20px;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media(max-width:330px){
+    .epmty_info h2{ 
+     font-size: 20px;
+    }
+}
+@media(max-width:700px){
+    .epmty_info{
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 50px;
+        margin-bottom: 50px; 
+}
+}
+
+.epmty_info span {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 145.4%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #777777;
+}
+.frimg {
+}
+
+.epmty_info button {
+    margin-top: 10px;
+    width: 260px;
+    height: 55px;
+    background: orangered;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+}
+.epmty_info button:hover {
+    background: rgb(123, 60, 37);
+}

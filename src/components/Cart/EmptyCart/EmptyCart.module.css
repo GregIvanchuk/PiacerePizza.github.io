@@ -34,13 +34,15 @@
     color: #777777;
 }
 .epmty_info button {
-    width: 210px;
-    height: 66px;
-    background: orangered;
-    border: none;
-    border-radius: 30px;
-    color: white;
+    margin-top: 10px;
     margin-left: 20px;
+    width: 260px;
+    height: 55px;
+    background: orangered;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
 }
 .epmty_info button:hover {
     background: rgb(123, 60, 37);

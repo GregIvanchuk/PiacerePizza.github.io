@@ -64,6 +64,10 @@
     line-height: 19px;
     color: #B6B6B6;
 }
+.delete_cart span:hover{
+    color: rgb(87, 87, 87) ;
+    font-size: 16.5px;
+}
 .cart_footer{
     display: flex;
     flex-direction: column;
@@ -140,7 +144,7 @@
     width: 211px;
     height: 55px;
     background: #FE5F1E;
-    border-radius: 30px;
+    border-radius: 10px;
     color: white;
     border: none;
 }
@@ -152,7 +156,7 @@
     height: 55px;
     background: #FFFFFF;
     border: 1px solid #D3D3D3;
-    border-radius: 30px;
+    border-radius: 10px;
     color: #D3D3D3;
 }
 .c_back:hover{

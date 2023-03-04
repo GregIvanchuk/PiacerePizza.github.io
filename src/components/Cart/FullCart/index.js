@@ -66,9 +66,9 @@ function FullCart() {
                                         Повернутися назад
                                     </button>
                                 </Link>
-                                <Link to="/go">
+                                <Link to="/orders">
                                     <button className={styles.buy}>
-                                        Оплатити зараз
+                                        Оформити замовлення
                                     </button>
                                 </Link>
                             </div>
