@@ -19,7 +19,7 @@ function FramedCart() {
           <h2>Ваше замовлення прийнято !</h2>
         </div>
         <span>Очікуйте свій товар в найближчому відділенні нової пошти</span>
-        <img className={styles.frimg} height={260} width={250} src="/images/framed.png"/>
+        <img className={styles.frimg} height={260} width={200} src="/images/framed.png"/>
         <Link to="/">
         <button>Повернутися назад</button>
         </Link>

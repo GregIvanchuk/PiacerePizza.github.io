@@ -2,11 +2,14 @@ import styles from "./OrdersForm.module.css";
 import React from "react";
 import { useState } from "react";
 import FramedCart from "../FramedCart";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { clearItems } from "../../../Redux/cartSlice";
 function OrdersForm({ openCart,itemsCart,setItemsCart,sum }) {
     let [onSub, setOnSub] = useState(false);
+    const dispatch = useDispatch();
     const {
         register,
         handleSubmit,
@@ -19,11 +22,9 @@ function OrdersForm({ openCart,itemsCart,setItemsCart,sum }) {
     //   await  itemsCart.forEach((item) => {
     //      axios.delete(`http://localhost:3001/cart/${item.id}`);
     //     }});
-        let ord = {data,itemsCart,sum:sum}
-        setItemsCart([]);
+        // let ord = {data,itemsCart,sum:sum}
+        dispatch(clearItems())
         setOnSub(!onSub);
-       
-   
     // fetchData() 
     };
     return onSub ? (
@@ -66,7 +67,7 @@ function OrdersForm({ openCart,itemsCart,setItemsCart,sum }) {
                             type="text"
                             placeholder=" Прізвище"
                         />
-                        {errors.firstName && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.firstName.message}</p>}
+                        {errors.lastName && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.lastName.message}</p>}
                         <input 
                             {...register("phoneNumber",{ 
                                 required: "Field is required",
@@ -75,7 +76,7 @@ function OrdersForm({ openCart,itemsCart,setItemsCart,sum }) {
                             type="tel"
                             placeholder=" Номер телефону"
                         />
-                        {errors.phoneNumber && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.firstName.message}</p>}
+                        {errors.phoneNumber && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.phoneNumber.message}</p>}
                         <input
                             {...register("city",{ 
                                 required: "Field is required",
@@ -86,7 +87,7 @@ function OrdersForm({ openCart,itemsCart,setItemsCart,sum }) {
                             type="text"
                             placeholder=" Місто"
                         />
-                        {errors.phoneNumber && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.firstName.message}</p>}
+                        {errors.city && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.city.message}</p>}
                         <input 
                             {...register("numberMail",{ 
                                 required: "Field is required",
@@ -97,8 +98,8 @@ function OrdersForm({ openCart,itemsCart,setItemsCart,sum }) {
                             type="number"
                             placeholder=" Віділення нової пошти"
                         />
-                        {errors.phoneNumber && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.firstName.message}</p>}
-                        <Link to="/framed">  <button className={styles.submit} type="submit">Submit</button></Link>
+                        {errors.numberMail && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.numberMail.message}</p>}
+                        <button className={styles.submit} type="submit">Submit</button>
                         <Link to="/"> <button className={styles.back} >Повернутися назад</button> </Link>
                     </form>
                 </div>
