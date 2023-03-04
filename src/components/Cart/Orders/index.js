@@ -89,16 +89,14 @@ function OrdersForm({ openCart,itemsCart,setItemsCart,sum }) {
                         />
                         {errors.city && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.city.message}</p>}
                         <input 
-                            {...register("numberMail",{ 
+                            {...register("homeAdress",{ 
                                 required: "Field is required",
-                                minLength: 1,
-                                maxLength: 3,
                             })}
-                            name="numberMail"
-                            type="number"
-                            placeholder=" Віділення нової пошти"
+                            name="homeAdress"
+                            type="text"
+                            placeholder=" Домашня адреса"
                         />
-                        {errors.numberMail && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.numberMail.message}</p>}
+                        {errors.homeAdress && <p style={{color:"red",height:'-20px',marginTop:"-15px",marginBottom:"-15px"}}>{errors.homeAdress.message}</p>}
                         <button className={styles.submit} type="submit">Submit</button>
                         <Link to="/"> <button className={styles.back} >Повернутися назад</button> </Link>
                     </form>
