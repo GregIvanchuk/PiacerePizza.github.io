@@ -33,9 +33,9 @@
     height: 137px;
     border-bottom: 1px solid #FE5F1E;
 }
-@media(max-width:320px){
+@media(max-width:500px){
     .header{
-        justify-content: center;
+       display: none;
     }
 }
 .header_left{

@@ -17,7 +17,15 @@
 }
 @media(max-width:1050px){
     .catNav{
-       width: 500px;
+       width: 800px;
+       flex-wrap: wrap;
+       overflow: scroll;
+       
+    }
+}
+@media(max-width:850px){
+    .catNav{
+       width: 600px;
        flex-wrap: wrap;
        overflow: scroll;
        

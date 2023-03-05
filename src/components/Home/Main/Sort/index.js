@@ -1,13 +1,15 @@
 import React from "react";
 import styles from "./Sort.module.css"
 import { useSelector,useDispatch } from "react-redux";
-import {setIsVisiblePopup} from "../../../../Redux/goodsSlice";
-function Sort ({selected,OnclickSortIndex,sortList}) { 
+import {setIsVisiblePopup,setGoods} from "../../../../Redux/goodsSlice";
+import {setSelected} from "../../../../Redux/filterSlice";
+function Sort ({OnclickSortIndex,sortList}) { 
      const dispatch = useDispatch();
      const isVisiblePopup= useSelector(state => state.goods.isVisiblePopup)
+     const selected = useSelector((state) => state.filter.selected)
     let onCatSort = () =>{
       dispatch(setIsVisiblePopup(!isVisiblePopup));
-    }
+    } 
 return(
     <div onClick={onCatSort} className={styles.sort}>
       <div className={styles.sort_label}>
@@ -20,7 +22,7 @@ return(
     {isVisiblePopup ?
     <div className={styles.sort_popup}>
          <ul>
-         {sortList.map((value,i) => <li className = {selected == i ? styles.activeSelected : styles.selected} onClick={() => OnclickSortIndex(i)} key={value}>{value}</li>)}
+         {sortList.map((value,i) => <li className = {selected == i ? styles.activeSelected : styles.selected} onClick={() => dispatch(setSelected(i))} key={value}>{value}</li>)}
           </ul>    
     </div>
     : ""}

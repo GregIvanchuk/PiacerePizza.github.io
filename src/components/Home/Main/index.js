@@ -4,7 +4,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useSelector,useDispatch } from "react-redux";
 import { getCatId } from "../../../Redux/filterSlice";
-import {setSelected} from "../../../Redux/goodsSlice";
+import {setSelected} from "../../../Redux/filterSlice";
 import {setGoods} from "../../../Redux/goodsSlice";
 import axios from 'axios';
 import MyLoader from "./Good/PizzaBlock";
@@ -15,31 +15,34 @@ function Main ({}) {
     const dispatch = useDispatch();
     const [isLoading, setIsLoading] = React.useState(true);
     const inputValued =  useSelector((state) => state.search.inputValue)
+    const categories = ["Всі","Вегатиріанські","М'ясні","Гострі","Гриль","Закриті"]
+    const sortList = ["популярності","ціні","алфавіту"];
+    const catId = useSelector((state) => state.filter.catId)
+    const goods = useSelector((state) => state.goods.goods)
+     const selected = useSelector((state) => state.filter.selected)
      useEffect(() => {
-    fetch("https://63d8e9bd74f386d4efe06c87.mockapi.io/items")
-    .then((resp) => {
-     return (resp.json())
-    })
-    .then((arr) => {
-      dispatch(setGoods(arr));
-      setIsLoading(false);
-    })     
+    // fetch(`https://63d8e9bd74f386d4efe06c87.mockapi.io/items`) //&sortBy=${0}
+    // .then((resp) => {
+    //  return (resp.json())
+    // })
+    // .then((arr) => {
+    //   dispatch(setGoods(arr));
+    //   
+    //   setIsLoading(false);
+    // })     
     
-    //   async function fetchData() {
-    // const Responceobj = await axios.get("https://63d8e9bd74f386d4efe06c87.mockapi.io/item");
-    // dispatch(setGoods(Responceobj.data));
-    // setIsLoading(false);
-    // console.log(goods);
-    //   }
-    //   fetchData();
+      async function fetchData() {
+    const Responceobj = await axios.get(`https://63d8e9bd74f386d4efe06c87.mockapi.io/items`);
+    const arr = Responceobj.data
+    dispatch(setGoods(arr));
+    setIsLoading(false);
+    console.log(goods);
+      }
+      fetchData();
    },[])
   
 
-    const categories = ["Всі","Вегатиріанські","М'ясні","Гострі","Гриль","Закриті"]
-    const sortList = ["популярності","ціні","алфавіту"];
-    const goods = useSelector((state) => state.goods.goods)
-    const catId = useSelector((state) => state.filter.catId)
-    const selected = useSelector((state) => state.goods.selected)
+    
 //     const dbt = [
 //       {"img":"/images/im1.jpg", "title": "Папероні",       "price":"23" , "id" : 1, "sizes":[26,30,40], "type" : [0,1],"category" : 1,"rating":8},                                                            
 //       {"img":"/images/im2.jpg", "title": "Сирна",          "price":"21" , "id" : 2, "sizes":[26,30],    "type" : [0],  "category" : 1,"rating":3},
@@ -51,14 +54,16 @@ function Main ({}) {
 //       {"img":"/images/im4.jpg", "title": "Чізбургер-піца", "price":"14" , "id" : 8, "sizes":[26],       "type" : [0,1],"category" : 5,"rating":1}
 
 // ]
-  //   let  sortArr = (arr) => {
-  //     return (
-  //   (selected == 2) ? arr.sort((a, b) => a.title.localeCompare(b.title)):
-  //   (selected == 1)? arr.sort((a, b) => a.price - b.price): arr.sort((a, b) => b.rating - a.rating)
-  //   )
-  // }
-// console.log(selected)
-// console.log(catId)
+//     let  sortArr = (arr) => {
+//    ( arr.length !=0) ?  
+//     (selected == 2) ? arr.sort((a, b) => a.title.localeCompare(b.title)):
+//     (selected == 1)? arr.sort((a, b) => a.price - b.price): arr.sort((a, b) => b.rating - a.rating)
+//     : 
+//      arr = [];
+//   }
+//  console.log(selected)
+//  const goods1 =  sortArr(goods);
+//  console.log(goods1);
     const filtredGoods = goods.filter((item) =>
     item.title.toLowerCase().includes(inputValued.toLowerCase())
          ) 
@@ -66,7 +71,7 @@ return(
     <main className={styles.main}>
       <div className={styles.categorios}>
        <Categor categories ={categories} catId={catId} OnclickCatIndex={(id) => dispatch(getCatId(id))}/>
-       <Sort sortList={sortList} selected={selected} OnclickSortIndex={(id) => dispatch(setSelected(id))}/>
+       {/* <Sort sortList={sortList} /> */}
        </div>
         <h1>{categories.map((value,i) => catId === i ? value: "")}</h1>
     {  inputValued ? 
