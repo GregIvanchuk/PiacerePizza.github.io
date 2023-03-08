@@ -16,6 +16,7 @@
     color: #000000;
 }
 .select_option {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,6 +91,7 @@
     color: #000000;
 }
 .item_footer button{
+    cursor: pointer;
     width: 132px;
     height: 40px;
     background-color: #FFFFFF;

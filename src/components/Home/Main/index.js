@@ -21,28 +21,14 @@ function Main ({}) {
     const goods = useSelector((state) => state.goods.goods)
      const selected = useSelector((state) => state.filter.selected)
      useEffect(() => {
-    // fetch(`https://63d8e9bd74f386d4efe06c87.mockapi.io/items`) //&sortBy=${0}
-    // .then((resp) => {
-    //  return (resp.json())
-    // })
-    // .then((arr) => {
-    //   dispatch(setGoods(arr));
-    //   
-    //   setIsLoading(false);
-    // })     
-    
       async function fetchData() {
     const Responceobj = await axios.get(`https://63d8e9bd74f386d4efe06c87.mockapi.io/items`);
     const arr = Responceobj.data
     dispatch(setGoods(arr));
     setIsLoading(false);
-    console.log(goods);
       }
       fetchData();
    },[])
-  
-
-    
 //     const dbt = [
 //       {"img":"/images/im1.jpg", "title": "Папероні",       "price":"23" , "id" : 1, "sizes":[26,30,40], "type" : [0,1],"category" : 1,"rating":8},                                                            
 //       {"img":"/images/im2.jpg", "title": "Сирна",          "price":"21" , "id" : 2, "sizes":[26,30],    "type" : [0],  "category" : 1,"rating":3},
@@ -52,7 +38,6 @@ function Main ({}) {
 //       {"img":"/images/im2.jpg", "title": "Українська",     "price":"20" , "id" : 6, "sizes":[26,30,40], "type" : [0],  "category" : 2,"rating":5},
 //       {"img":"/images/im3.jpg", "title": "Неополітанська", "price":"19" , "id" : 7, "sizes":[26,40],    "type" : [0,1],"category" : 4,"rating":4},
 //       {"img":"/images/im4.jpg", "title": "Чізбургер-піца", "price":"14" , "id" : 8, "sizes":[26],       "type" : [0,1],"category" : 5,"rating":1}
-
 // ]
 //     let  sortArr = (arr) => {
 //    ( arr.length !=0) ?  
